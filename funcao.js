@@ -27,3 +27,5 @@ function calc(item1, item2, operacao){
 }
 
 console.log(calc(3,2, sub))
+
+module.exports = soma;

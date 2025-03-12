@@ -36,11 +36,15 @@ console.log(t('v'))
 //Se o delta for positivo, a equação possui duas raiz reais;
 //    informe-as ao usuário;
 
-let a = 4
-let b = 2
-let c = 2
+let b = 10
+let a = 5
+let c = 0
 
-let res = ((a*2) / 100) + b + c
 
-console.log(res)
+let delta = b*b - 4*a*c
+
+if( a <= 0){
+    return "equação não é de segundo grau"
+}
+console.log(delta)
 
