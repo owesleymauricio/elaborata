@@ -23,3 +23,4 @@ let fim = alunoOrdenado.length
 alunos.forEach(function(item){
     console.log(item)
 })
+
