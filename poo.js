@@ -50,4 +50,6 @@ canetaAmarelo.escrever("lorem       jnonmfvoimoifvmkoifmkiobfgob")
 console.log(can1)
 console.log(can2)
 
+//Exercicio 036
+//Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
 
