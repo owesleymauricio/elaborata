@@ -23,3 +23,13 @@ let options = { flag: "a"}
 //    console.log(data);
 //})
 
+console.log("digite o numero 1:")
+process.stdin.on('data', function(data){
+
+    let n1 = data.toString("utf-8").trim()
+
+
+
+    if(n1 === "s"){process.exit()}
+
+});
