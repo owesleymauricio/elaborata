@@ -1,7 +1,9 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
 
-const { getAll, cadastrar } = require("./model/clientes");
+import { getAll, cadastrar } from "./model/clientes.mjs";
+
+
 
 // express
 const app = express();
