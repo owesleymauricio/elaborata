@@ -1,13 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-import {
-    getAll,
-    atualizar,
-    cadastrar,
-    deletar,
-    pesquisar
-} from "./model/clientes.js"
+const { getAll, cadastrar } = require("./model/clientes");
 
 // express
 const app = express();
