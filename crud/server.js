@@ -9,6 +9,7 @@ import {
     pesquisar
 } from "./model/clientes.js"
 
+// express
 const app = express();
 
 app.use(cors());
