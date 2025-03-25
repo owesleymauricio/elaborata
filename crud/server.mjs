@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import { getAll, cadastrar } from "./model/clientes.mjs";
+import { getAll, cadastrar, deletar } from "./model/clientes.mjs";
 
 
 
@@ -40,6 +40,18 @@ app.post("/cliente-novo", async (req, res) => {
         data.telefone,
         data.idade);
     res.json(result).status(201)
+})
+
+app.post("/clientes/delete", async (req, res) => {
+    
+    let {id} = req.body;
+    return await deletar(id)
+        .then((result) => {
+            res.json(result).status(200)
+        })
+        .catch((error) => {
+            res.json(error).status(500)
+        })
 })
 
 app.listen(3000, () => {
