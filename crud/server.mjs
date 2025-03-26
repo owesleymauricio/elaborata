@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
+import sha1 from "sha1"
 
-import { getAll, cadastrar, deletar } from "./model/clientes.mjs";
+import { getAll, cadastrar, deletar,  logar } from "./model/clientes.mjs";
 
 
 
@@ -52,6 +53,15 @@ app.post("/clientes/delete", async (req, res) => {
         .catch((error) => {
             res.json(error).status(500)
         })
+})
+
+app.post("/login", async (req, res)=> {
+    let {usuario, senha} = req.body;
+    let hash = sha1(senha);
+
+    let result = await logar(usuario, hash);
+
+    res.json(result).status(200)
 })
 
 app.listen(3000, () => {
